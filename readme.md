@@ -52,8 +52,9 @@ float determinant = /* calculated value */;
 float kofaktor[3][3]; // Cofactor matrix
 float setAdjoin[3][3]; // Adjoint matrix
 float setInvers[3][3]; // Inverse matrix
+```
 
-// calculation steps in
+#### Calculate Step In
 Matrix Inverse Calculation Steps
 1. Determinant Calculation
 
@@ -80,4 +81,3 @@ Key Constraints
 
 Determinant must not be zero
 Only works for square matrices
-```
