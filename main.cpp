@@ -1,6 +1,5 @@
-#include <iostream>
-#include <string>
-#include <string.h>
+#include <iostream> // Untuk operasi input/output
+#include <string.h> // Untuk mengcopy value 
 
 /*
 What We Learn
@@ -58,13 +57,16 @@ int main()
     kofaktor[2][1] = -(getMatrix[0][0] * getMatrix[1][2] - getMatrix[0][2] * getMatrix[1][0]); // -(4 * 5 - 8 * 2) = -(20 - 16) = -(4) = -4
     kofaktor[2][2] = (getMatrix[0][0] * getMatrix[1][1] - getMatrix[0][1] * getMatrix[1][0]);  // (4 * 1 - 2 * 2) = 4 - 4 = 0
 
+    // => Menghitung adjoin
     float setAdjoin[3][3] = {
         {kofaktor[0][0], kofaktor[1][0], kofaktor[2][0]},  // {-6, 8, 2}
         {kofaktor[0][1], kofaktor[1][1], kofaktor[2][1]},  // {7, -8, -4}
         {kofaktor[0][2], kofaktor[1][2], kofaktor[2][2]}}; // {1, -2, 0}
 
+    // getter adjoin
     float getAdjoin[3][3];
 
+    // copy setter getternya
     memcpy(getAdjoin, setAdjoin, sizeof(setAdjoin));
 
     // Hitung Invers
